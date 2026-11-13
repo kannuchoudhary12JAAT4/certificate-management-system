@@ -116,17 +116,17 @@ body {
 
 /* Specific Container Custom Colors */
 .card.login-box {
-  background-color: #943bcf; /* Distinct Deep Navy for Login */
+  background-color: #943bcf;
   border-color: #2f1e3b;
 }
 
 .card.verify-box {
-  background-color: #943bcf; /* Distinct Slate Blue for Verify */
+  background-color: #943bcf;
   border-color: #1a334d;
 }
 
 .card.upload-box {
-  background-color: #943bcf; /* Distinct Indigo Dark for Upload */
+  background-color: #943bcf;
   border-color: #232d4a;
 }
 
@@ -344,15 +344,16 @@ input:focus, select:focus {
   padding: 0.5rem;
   font-size: 0.85rem;
 }
-/* Custom colors for the Login Container text elements */
+
+/* Login text */
 #login-container p {
-  color: #f9f9f9; /* Change this to any color you want for the description text */
+  color: #f9f9f9;
 }
 
 #login-container .input-group label {
-  color: #fdfeff; /* Change this to any color you want for 'Username' and 'Password' labels */
+  color: #fdfeff;
 }
-/* Change login description and all form labels to white */
+
 #login-container p,
 .input-group label {
   color: #ffffff !important;
