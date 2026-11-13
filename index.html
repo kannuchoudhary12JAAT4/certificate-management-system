@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Certificate Portal</title>
-  <!-- Link to the Modern Minimalist CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
   <header class="navbar">
     <h1>Digital Certificate Portal</h1>
     <div class="nav-controls">
@@ -18,51 +16,52 @@
     </div>
   </header>
 
-  <!-- Main Container -->
   <main class="content">
 
-    <!-- 1. LOGIN PAGE (Shown first by default) -->
     <section id="login-container" class="card login-box" style="max-width: 420px; margin: 4rem auto;">
       <h2>Admin Authentication</h2>
-      <p style="color: #f7f7f7; font-size: 0.9rem; margin-bottom: 1.25rem;"">
+      <p style="color: #f7f7f7; font-size: 0.9rem; margin-bottom: 1.25rem;">
         Sign in to access certificate issuance, management tools, and instant verification pipelines.
       </p>
+
       <form id="login-form">
         <div class="input-group">
           <label for="username">Username</label>
           <input type="text" id="username" placeholder="Enter username" required>
         </div>
+
         <div class="input-group">
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Enter password" required>
         </div>
+
         <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Sign In</button>
         <p id="login-error" class="error-msg" style="font-size: 0.85rem; margin-top: 0.5rem;"></p>
       </form>
     </section>
 
-    <!-- 2. MAIN APP CONTAINER (Unlocked after login - Contains Verification & Upload on One Page) -->
     <section id="app-container" class="hidden">
-      
-      <!-- Top Grid: Verify Certificate & Upload Form Side-by-Side -->
+
       <div class="dashboard-grid" style="margin-bottom: 2rem;">
-        
-        <!-- Verify Certificate Card (Left with custom verify-box color) -->
+
         <div class="card verify-box">
           <h2>Verify Certificate</h2>
+
           <form id="verify-form">
             <div class="input-group">
               <label for="verify-cert-id">Certificate ID</label>
               <input type="text" id="verify-cert-id" placeholder="e.g. CERT-ABC123XYZ" required>
             </div>
+
             <button type="submit" class="btn btn-primary">Verify Now</button>
           </form>
+
           <div id="verify-result"></div>
         </div>
 
-        <!-- Upload New Certificate Card (Right with custom upload-box color) -->
         <div class="card upload-box">
           <h2>Upload New Certificate</h2>
+
           <form id="upload-form">
             <div class="input-group">
               <label for="cert-title">Certificate Title</label>
@@ -97,20 +96,22 @@
               <input type="file" id="pdf-file" accept="application/pdf" required>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Publish Certificate</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+              Publish Certificate
+            </button>
           </form>
+
           <div id="upload-message" style="margin-top: 0.75rem;"></div>
         </div>
 
       </div>
 
-      <!-- Bottom Section: Issued Certificates Management Dashboard -->
       <div class="card">
         <h2>Issued Certificates Dashboard</h2>
-        
-        <!-- Controls Toolbar: Search & Filter -->
+
         <div class="controls-toolbar">
           <input type="text" id="search-input" placeholder="Search by title, recipient, or ID...">
+
           <select id="filter-category">
             <option value="All">All Categories</option>
             <option value="Software Development">Software Development</option>
@@ -121,22 +122,17 @@
           </select>
         </div>
 
-        <!-- Render Grid for Certificates -->
-        <div id="cert-grid" class="cert-grid">
-          <!-- Dynamic JavaScript cards render here -->
-        </div>
+        <div id="cert-grid" class="cert-grid"></div>
       </div>
 
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem;">
     &copy; 2026 Choudhary Portal. Built for Enterprise Verification Systems.
   </footer>
 
-  <!-- Link to JavaScript logic -->
   <script src="script.js"></script>
 </body>
 </html>
